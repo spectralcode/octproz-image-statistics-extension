@@ -12,4 +12,4 @@ The left window is OCTproZ with activated 3D live view and the right window is t
 
 License
 ----------
-Image Statistics Extension is licensed under MIT License. See [LICENSE](LICENSE).
+Image Statistics Extension is licensed under GPLv3. See [LICENSE](LICENSE).
