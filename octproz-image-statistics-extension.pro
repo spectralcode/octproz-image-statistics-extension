@@ -1,13 +1,14 @@
 QT	   += core gui widgets printsupport
+QMAKE_PROJECT_DEPTH = 0
 
 TARGET = ImageStatisticsExtension
 TEMPLATE = lib
 CONFIG += plugin
 
 #define path of OCTproZ_DevKit share directory, plugin/extension directory
-SHAREDIR = $$shell_path($$PWD/../octproz_share_dev)
+SHAREDIR = $$shell_path($$PWD/../../octproz_share_dev)
 PLUGINEXPORTDIR = $$shell_path($$SHAREDIR/plugins)
-QCUSTOMPLOTDIR = $$shell_path($$PWD/../QCustomPlot)
+QCUSTOMPLOTDIR = $$shell_path($$PWD/src/thirdparty/qcustomplot)
 
 CONFIG(debug, debug|release) {
 	PLUGINEXPORTDIR = $$shell_path($$SHAREDIR/plugins/debug)
