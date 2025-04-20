@@ -115,7 +115,7 @@ void ResizableRectItem::hoverMoveEvent(QGraphicsSceneHoverEvent* event) {
 
 void ResizableRectItem::hoverLeaveEvent(QGraphicsSceneHoverEvent *event)
 {
-
+	QGraphicsRectItem::hoverEnterEvent(event);
 }
 
 void ResizableRectItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)

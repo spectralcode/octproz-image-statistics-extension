@@ -186,15 +186,15 @@ void ROISelector::slot_updateROI() {
 	qreal height = this->roiRect->getInnerRectHeight();
 
 	QRectF frameRect = this->inputItem->boundingRect();
-	qreal xposFrame = this->inputItem->x();
-	qreal yposFrame = this->inputItem->y();
-	qreal widthFrame = frameRect.width();
-	qreal heightFrame = frameRect.height();
+	// qreal xposFrame = this->inputItem->x();
+	// qreal yposFrame = this->inputItem->y();
+	// qreal widthFrame = frameRect.width();
+	// qreal heightFrame = frameRect.height();
 
 	qreal roiX = frameRect.x() - xpos;
 	qreal roiY = frameRect.y() - ypos;
-	qreal widthdelta = frameRect.width() - width;
-	qreal heightdelta = frameRect.height() - height;
+	// qreal widthdelta = frameRect.width() - width;
+	// qreal heightdelta = frameRect.height() - height;
 
 	emit roiChanged(static_cast<int>(-roiX), static_cast<int>(-roiY), static_cast<int>(width), static_cast<int>(height));
 }

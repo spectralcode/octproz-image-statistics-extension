@@ -64,20 +64,20 @@ void BitDepthConverter::slot_convertDataTo8bit(void *inputData, unsigned int bit
 		}
 		//no conversion needed if inputData is already 8bit or below
 		if (bitDepth <= 8){
-			for(int i=0; i<length-1; i++){
+			for(unsigned int i=0; i<length-1; i++){
 			   this->output8bitData[i] = static_cast<ushort*>(inputData)[i];
 			}
 		}
 		//convert to 8 bit element by element //todo: optimize
 		else if (bitDepth >= 9 && bitDepth <=16){
 		   float factor = 255 / (pow(2,bitDepth) - 1);
-		   for(int i=0; i<length-1; i++){
+		   for(unsigned int i=0; i<length-1; i++){
 			  this->output8bitData[i] = static_cast<ushort*>(inputData)[i] * factor;
 		   }
 		}
 		else if (bitDepth > 16 && bitDepth <=32){
 		   float factor = 255 / (pow(2,bitDepth) - 1);
-		   for(int i=0; i<length-1; i++){
+		   for(unsigned int i=0; i<length-1; i++){
 			  this->output8bitData[i] = static_cast<unsigned int*>(inputData)[i] * factor;
 		   }
 		//do nothing if bit depth is out of range

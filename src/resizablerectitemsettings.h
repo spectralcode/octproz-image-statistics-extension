@@ -7,7 +7,7 @@
 #include <QPen>
 #include <QBrush>
 
-class ResizeDirections;
+struct ResizeDirections;
 
 class ResizableRectItemSettings
 {

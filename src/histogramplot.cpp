@@ -116,6 +116,7 @@ void HistogramPlot::mouseMoveEvent(QMouseEvent* event) {
 
 void HistogramPlot::mouseDoubleClickEvent(QMouseEvent* event) {
 	this->fitView();
+	QCustomPlot::mouseDoubleClickEvent(event);
 }
 
 void HistogramPlot::slot_saveToDisk() {
