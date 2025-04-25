@@ -62,7 +62,7 @@ ROISelector::ROISelector(QWidget *parent) : QGraphicsView(parent)
 	//setup bitconverter
 	this->bitConverter = new BitDepthConverter();
 	this->bitConverter->moveToThread(&converterThread);
-	connect(this, &ROISelector::non8bitFrameReceived, this->bitConverter, &BitDepthConverter::slot_convertDataTo8bit);
+	connect(this, &ROISelector::non8bitFrameReceived, this->bitConverter, &BitDepthConverter::convertDataTo8bit);
 	connect(this->bitConverter, &BitDepthConverter::info, this, &ROISelector::info);
 	connect(this->bitConverter, &BitDepthConverter::error, this, &ROISelector::error);
 	connect(this->bitConverter, &BitDepthConverter::converted8bitData, this, &ROISelector::slot_displayFrame);
